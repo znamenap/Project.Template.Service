@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MediatR;
+
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Project.Template.Services
 {
@@ -12,19 +14,9 @@ namespace Project.Template.Services
         /// </summary>
         public static IServiceCollection AddTemplateServices(this IServiceCollection services)
         {
+            services.AddMediatR(typeof(ServicesCollectionExtensions));
 
             return services;
-        }
-
-        /// <summary>
-        /// Adds the template controllers.
-        /// </summary>
-        public static IMvcBuilder AddTemplateControllers(this IMvcBuilder mvcBuilder)
-        {
-            // Register all controllers of this assembly.
-            mvcBuilder.AddApplicationPart(typeof(ServicesCollectionExtensions).Assembly);
-
-            return mvcBuilder;
         }
     }
 }

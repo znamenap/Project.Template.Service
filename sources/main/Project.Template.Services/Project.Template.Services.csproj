@@ -6,7 +6,9 @@
 
   <ItemGroup>
     <PackageReference Include="Mapster" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
   </ItemGroup>
 
   <ItemGroup>

@@ -45,5 +45,16 @@ namespace Project.Template.ServiceHost
 
             app.Run();
         }
+
+        /// <summary>
+        /// Adds the template controllers.
+        /// </summary>
+        public static IMvcBuilder AddTemplateControllers(this IMvcBuilder mvcBuilder)
+        {
+            // Register all controllers of this assembly.
+            mvcBuilder.AddApplicationPart(typeof(ServicesCollectionExtensions).Assembly);
+
+            return mvcBuilder;
+        }
     }
 }

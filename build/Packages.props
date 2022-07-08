@@ -5,10 +5,14 @@
 
   <ItemGroup Label="Production Code Dependencies">
     <PackageReference Update="Mapster" Version="7.3.0" />
+    <PackageReference Update="FluentValidation" Version="11.1.0" />
+    <PackageReference Update="FluentValidation.DependencyInjectionExtensions" Version="11.1.0" />
+    <PackageReference Update="MediatR" Version="9.0.0" />
+    <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Update="CSharpFunctionalExtensions" Version="2.30.0" />
     <PackageReference Update="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Update="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup Label="Development and Testing Dependencies">
