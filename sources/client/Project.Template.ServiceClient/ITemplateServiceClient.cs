@@ -3,9 +3,9 @@
 namespace Project.Template.ServiceClient
 {
     /// <summary>
-    /// The Template service client.
+    /// The template service client.
     /// </summary>
-    public class TemplateServiceClient : ITemplateServiceClient
+    public interface ITemplateServiceClient
     {
         /// <summary>
         /// Gets the administration.

@@ -1,18 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="Mapster" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\client\Project.Template.ServiceContracts\Project.Template.ServiceContracts.csproj" />
     <ProjectReference Include="..\Project.Template.Domain\Project.Template.Domain.csproj" />
-    <ProjectReference Include="..\Project.Template.Services\Project.Template.Services.csproj" />
   </ItemGroup>
 
 </Project>

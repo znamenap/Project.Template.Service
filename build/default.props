@@ -12,11 +12,12 @@
 
     <!-- Identification -->
     <Company>Template Company</Company>
-    <Copyright>Template Company Copyright</Copyright>
+    <Copyright>Template Company ©️</Copyright>
     <Authors>Template Development Team</Authors>
     <Description>Template Domain Solution</Description>
-    <PackageProjectUrl>https://www.Template.net/Template/</PackageProjectUrl>
-    <Product>Template</Product>
+    <PackageProjectUrl>https://www.template.net/product/</PackageProjectUrl>
+    <Product>Template Product ®️</Product>
+    <Trademark>Template Company ™️</Trademark>
     <ProductFileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</ProductFileVersion>
     <InformationalVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(GitCommit)@$(GitBranch)</InformationalVersion>
     <FileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</FileVersion>
@@ -56,4 +57,11 @@
   <ItemGroup Label="Source Link Items">
     <SourceLinkBitbucketGitHost Include="bitbucket.yourdomain.com" Version="4.5" Condition=" '$(GitRepoHost)' == 'Bitbucket' "/>
   </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyTrademarkAttribute">
+      <_Parameter1>$(Trademark)</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  
 </Project>

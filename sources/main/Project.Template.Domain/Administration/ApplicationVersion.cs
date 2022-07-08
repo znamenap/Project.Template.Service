@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace Project.Template.Domain.AdminFeature
+namespace Project.Template.Domain.Administration
 {
     /// <summary>
     /// The application version.
@@ -105,7 +105,7 @@ namespace Project.Template.Domain.AdminFeature
         public static ApplicationVersion Create()
         {
             var assembly = typeof(ApplicationVersion).Assembly;
-            return new ApplicationVersion {
+            var version = new ApplicationVersion {
                 Title = assembly.GetCustomAttribute<AssemblyTitleAttribute>()?.Title,
                 Product = assembly.GetCustomAttribute<AssemblyProductAttribute>()?.Product,
                 Description = assembly.GetCustomAttribute<AssemblyDescriptionAttribute>()?.Description,
@@ -113,10 +113,11 @@ namespace Project.Template.Domain.AdminFeature
                 Copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>()?.Copyright,
                 Trademark = assembly.GetCustomAttribute<AssemblyTrademarkAttribute>()?.Trademark,
                 Configuration = assembly.GetCustomAttribute<AssemblyConfigurationAttribute>()?.Configuration,
-                AssemblyVersion = assembly.GetCustomAttribute<AssemblyVersionAttribute>()?.Version,
+                AssemblyVersion = assembly.GetCustomAttribute<AssemblyVersionAttribute>()?.Version ?? assembly.GetName().Version.ToString(),
                 FileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version,
                 InformationalVersion = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion,
             };
+            return version;
         }
     }
 }

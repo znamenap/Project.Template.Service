@@ -2,7 +2,7 @@ using FluentAssertions;
 
 using NUnit.Framework;
 
-using Project.Template.Domain.AdminFeature;
+using Project.Template.Domain.Administration;
 
 namespace Project.Template.Domain.UnitTests
 {

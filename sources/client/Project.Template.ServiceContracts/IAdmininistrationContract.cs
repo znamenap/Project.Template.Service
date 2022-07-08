@@ -1,9 +1,11 @@
-﻿namespace Project.Template.ServiceContracts.AdminFeature
+﻿using Project.Template.ServiceContracts.Administration;
+
+namespace Project.Template.ServiceContracts
 {
     /// <summary>
     /// The Template domain service administration.
     /// </summary>
-    public interface ITemplateAdmin
+    public interface IAdmininistrationContract
     {
         /// <summary>
         /// Gets the application version.

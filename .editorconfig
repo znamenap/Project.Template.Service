@@ -114,6 +114,7 @@ csharp_style_expression_bodied_local_functions = false:silent
 csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_throw_expression = true:suggestion
 
+
 [*.{cs,vb}]
 #### Naming styles ####
 
@@ -181,7 +182,10 @@ dotnet_style_prefer_compound_assignment = true:suggestion
 dotnet_style_prefer_simplified_interpolation = true:suggestion
 dotnet_style_namespace_match_folder = true:suggestion
 
-[*Tests.cs]
+[*{Tests,Program}.cs]
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = none
+
 # Default severity for analyzer diagnostics with category 'DocumentationHeader'
 dotnet_analyzer_diagnostic.category-DocumentationHeader.severity = none
 

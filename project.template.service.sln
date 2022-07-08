@@ -38,11 +38,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Template.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Template.Domain.UnitTests", "sources\test\Project.Template.Domain.UnitTests\Project.Template.Domain.UnitTests.csproj", "{41DEB4C4-1E04-49E2-BCBA-CE8960E95D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Template.ServiceClient", "sources\client\Project.Template.ServiceClient\Project.Template.ServiceClient.csproj", "{31112353-51E5-4524-B3A6-B0B025E35B27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Template.ServiceClient", "sources\client\Project.Template.ServiceClient\Project.Template.ServiceClient.csproj", "{31112353-51E5-4524-B3A6-B0B025E35B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Template.ServiceContracts", "sources\client\Project.Template.ServiceContracts\Project.Template.ServiceContracts.csproj", "{4A6C2AEE-88EB-4FCB-B23E-7C8E0C5D0D3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Template.ServiceContracts", "sources\client\Project.Template.ServiceContracts\Project.Template.ServiceContracts.csproj", "{4A6C2AEE-88EB-4FCB-B23E-7C8E0C5D0D3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Template.ServiceHost", "sources\main\Project.Template.ServiceHost\Project.Template.ServiceHost.csproj", "{3F93D7B5-91BB-4285-B46D-E7315C986B14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Template.ServiceHost", "sources\main\Project.Template.ServiceHost\Project.Template.ServiceHost.csproj", "{3F93D7B5-91BB-4285-B46D-E7315C986B14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Template.Services", "sources\main\Project.Template.Services\Project.Template.Services.csproj", "{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{3F93D7B5-91BB-4285-B46D-E7315C986B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F93D7B5-91BB-4285-B46D-E7315C986B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F93D7B5-91BB-4285-B46D-E7315C986B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{31112353-51E5-4524-B3A6-B0B025E35B27} = {10C13CA1-DB6A-4562-B202-F3094862FDB5}
 		{4A6C2AEE-88EB-4FCB-B23E-7C8E0C5D0D3B} = {10C13CA1-DB6A-4562-B202-F3094862FDB5}
 		{3F93D7B5-91BB-4285-B46D-E7315C986B14} = {BB05FBDE-EEB6-43C9-9232-2C5B19E9F616}
+		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F} = {BB05FBDE-EEB6-43C9-9232-2C5B19E9F616}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52ED2678-ED41-4F75-BF07-2052B343F887}
