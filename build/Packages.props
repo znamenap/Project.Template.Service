@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- This file follows this guide: https://github.com/microsoft/MSBuildSdks/tree/main/src/CentralPackageVersions -->
+
+  <ItemGroup Label="Production Code Dependencies">
+    <PackageReference Update="CSharpFunctionalExtensions" Version="2.30.0" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Update="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup Label="Development and Testing Dependencies">
+    <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition=" '$(GitRepoHost)' == 'GitHub' " />
+    <PackageReference Update="Microsoft.SourceLink.Bitbucket.Git" Version="1.1.1" PrivateAssets="All" Condition=" '$(GitRepoHost)' == 'Bitbucket' " />
+    <PackageReference Update="FluentAssertions" Version="6.7.0"/>
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.1.0"/>
+    <PackageReference Update="Moq" Version="4.16.1"/>
+    <PackageReference Update="NUnit" Version="3.13.3"/>
+    <PackageReference Update="NUnit3TestAdapter" Version="4.2.1"/>
+    <PackageReference Update="NUnit.Analyzers" Version="3.3.0"/>
+    <PackageReference Update="coverlet.collector" Version="3.1.2"/>
+    <PackageReference Update="coverlet.msbuild" Version="3.1.2"/>
+    <PackageReference Update="NunitXml.TestLogger" Version="3.0.117"/>
+    <PackageReference Update="ReportGenerator" Version="5.1.9"/>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.Build.NoTargets">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDefaultNoneItems>true</EnableDefaultNoneItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="billing-records.csv" />
+    <None Include="certs\TemplateKeyPair.snk" />
+    <None Include="default.props" />
+    <None Include="Directory.Build.props" />
+    <None Include="Export-BillingRecord.ps1" />
+    <None Include="Packages.props" />
+  </ItemGroup>
+</Project>

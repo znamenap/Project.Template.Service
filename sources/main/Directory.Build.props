@@ -1,0 +1,14 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)..\..\build\default.props"/>
+
+  <PropertyGroup>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)..\..\output\main\bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\..\output\main\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(MSBuildThisFileDirectory)..\..\output\main\obj\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PublicSign>true</PublicSign>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\TemplateKeyPair.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+</Project>

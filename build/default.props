@@ -1,0 +1,59 @@
+<Project>
+  <PropertyGroup>
+
+    <!-- Build Parameters -->
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion Condition="'$(MinorVersion)' == ''">0</MinorVersion>
+    <PatchVersion Condition="'$(PatchVersion)' == ''">0</PatchVersion>
+    <GitBranch Condition="'$(GitBranch)' == ''">feature</GitBranch>
+    <GitCommit Condition="'$(GitCommit)' == ''">local-build</GitCommit>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Platform Condition="'$(Platform)' == ''">Any CPU</Platform>
+
+    <!-- Identification -->
+    <Company>Template Company</Company>
+    <Copyright>Template Company Copyright</Copyright>
+    <Authors>Template Development Team</Authors>
+    <Description>Template Domain Solution</Description>
+    <PackageProjectUrl>https://www.Template.net/Template/</PackageProjectUrl>
+    <Product>Template</Product>
+    <ProductFileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</ProductFileVersion>
+    <InformationalVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(GitCommit)@$(GitBranch)</InformationalVersion>
+    <FileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</FileVersion>
+    <AssemblyVersion>$(MajorVersion).0.0</AssemblyVersion>
+    <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion)</Version>
+    <VersionSuffix Condition="'$(VersionSuffix)' == 'master'"></VersionSuffix>
+    <VersionSuffix Condition="'$(VersionSuffix)' != 'master'">$(VersionSuffix)</VersionSuffix>
+
+    <!-- Build Specifics -->
+    <RootDir>$(MSBuildThisFileDirectory)..\</RootDir>
+    <WarningLevel>4</WarningLevel>
+    <CentralPackagesFile>$(MSBuildThisFileDirectory)Packages.props</CentralPackagesFile>
+
+    <!--  Language & Assembly -->
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <!-- NuGet Package -->
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageOutputPath>$(RootDir)\output\nuget\</PackageOutputPath>
+    <PackageVersion Condition="'$(VersionSuffix)' != ''">$(Version)-$(VersionSuffix)</PackageVersion>
+    <PackageVersion Condition="'$(VersionSuffix)' == ''">$(Version)</PackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Source Link Parameters">
+    <PublishRepositoryUrl Label="Optional: Publish the repository URL in the built .nupkg (in the NuSpec &lt;Repository&gt; element)">true</PublishRepositoryUrl>
+    <EmbedUntrackedSources Label="Optional: Embed source files that are not tracked by the source control manager in the PDB" >true</EmbedUntrackedSources>
+    <IncludeSymbols Label="Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link">false</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GitRepoHost Label="Determines which package to reference based on the name: GitHub, Bitbucket, ">GitHub</GitRepoHost>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <ItemGroup Label="Source Link Items">
+    <SourceLinkBitbucketGitHost Include="bitbucket.yourdomain.com" Version="4.5" Condition=" '$(GitRepoHost)' == 'Bitbucket' "/>
+  </ItemGroup>
+</Project>

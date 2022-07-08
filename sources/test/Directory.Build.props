@@ -1,0 +1,30 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)..\..\build\default.props"/>
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)..\..\output\test\bin\$(Platform)\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\..\output\test\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(MSBuildThisFileDirectory)..\..\output\test\obj\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+    <IsPackable>false</IsPackable>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\TemplateKeyPair.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <!-- https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md -->
+  <PropertyGroup Label="Code Coverage Properties">
+    <CollectCoverage>true</CollectCoverage>
+    <CoverletOutputFormat>json,cobertura</CoverletOutputFormat>
+    <CoverletOutput>$(RootDir)\output\reports\coverage/</CoverletOutput>
+    <Threshold>69,50,69</Threshold>
+    <ThresholdType>line,branch,method</ThresholdType>
+    <SkipAutoProps>true</SkipAutoProps>
+    <UseSourceLink>true</UseSourceLink>
+    <DeterministicReport>true</DeterministicReport>
+  </PropertyGroup>
+
+
+</Project>
