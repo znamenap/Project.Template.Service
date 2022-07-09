@@ -8,6 +8,10 @@ using Microsoft.Extensions.Hosting;
 
 using Project.Template.Services;
 
+using System;
+using System.IO;
+using System.Linq;
+
 namespace Project.Template.ServiceHost
 {
     public static class Program
@@ -26,7 +30,13 @@ namespace Project.Template.ServiceHost
             builder.Services.AddTemplateServices();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                Directory
+                    .EnumerateFiles(AppContext.BaseDirectory, "*.xml", new EnumerationOptions { IgnoreInaccessible = true, RecurseSubdirectories = true })
+                    .ToList()
+                    .ForEach(x => options.IncludeXmlComments(x, true));
+            });
 
             var app = builder.Build();
 

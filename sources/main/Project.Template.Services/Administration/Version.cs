@@ -18,7 +18,7 @@ namespace Project.Template.Services.Administration
     /// <summary>
     /// The version.
     /// </summary>
-    public class Version
+    public class AppVersion
     {
         /// <summary>
         /// The query for Application Version.
@@ -32,13 +32,13 @@ namespace Project.Template.Services.Administration
         /// </summary>
         public class Handler : IRequestHandler<Query, ApplicationVersionDto>
         {
-            private readonly ILogger<Version> logger;
+            private readonly ILogger<AppVersion> logger;
             private readonly IMapper mapper;
 
             /// <summary>
             /// Initializes a new instance of the <see cref="Handler"/> class.
             /// </summary>
-            public Handler(ILogger<Version> logger, IMapper mapper)
+            public Handler(ILogger<AppVersion> logger, IMapper mapper)
             {
                 this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
                 this.mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));

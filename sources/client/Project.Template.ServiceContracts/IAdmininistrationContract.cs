@@ -1,5 +1,7 @@
 ﻿using Project.Template.ServiceContracts.Administration;
 
+using System.Threading.Tasks;
+
 namespace Project.Template.ServiceContracts
 {
     /// <summary>
@@ -11,11 +13,11 @@ namespace Project.Template.ServiceContracts
         /// Gets the application version.
         /// </summary>
         /// <returns>An ApplicationVersionDto.</returns>
-        ApplicationVersionDto GetApplicationVersion();
+        Task<ApplicationVersionDto> GetApplicationVersion();
 
         /// <summary>
         /// Requests the ping response from the Template domain service.
         /// </summary>
-        PongDto Ping();
+        Task<PongDto> Ping();
     }
 }

@@ -1,35 +1,32 @@
-using Mapster;
 
-using MapsterMapper;
+using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
-using Project.Template.Domain.Administration;
 using Project.Template.ServiceContracts;
 using Project.Template.ServiceContracts.Administration;
+using Project.Template.Services.Administration;
+
+using System;
+using System.Threading.Tasks;
 
 namespace Project.Template.ServiceHost.Controllers
 {
     /// <summary>
-    /// The admin controller.
+    /// The services administration controller.
     /// </summary>
     [ApiController]
     [Route("admin")]
     public class AdministrationController : ControllerBase, IAdmininistrationContract
     {
-        private readonly ILogger<AdministrationController> logger;
-        private readonly IMapper mapper;
+        private readonly IMediator mediatr;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AdministrationController"/> class.
         /// </summary>
-        /// <param name="logger">The logger.</param>
-        /// <param name="mapper">The mapper.</param>
-        public AdministrationController(ILogger<AdministrationController> logger, IMapper mapper)
+        public AdministrationController(IMediator mediatr)
         {
-            this.logger = logger;
-            this.mapper = mapper;
+            this.mediatr = mediatr ?? throw new ArgumentNullException(nameof(mediatr));
         }
 
         /// <summary>
@@ -37,21 +34,18 @@ namespace Project.Template.ServiceHost.Controllers
         /// </summary>
         /// <returns>An ApplicationVersionDto.</returns>
         [HttpGet("version")]
-        public ApplicationVersionDto GetApplicationVersion()
+        public Task<ApplicationVersionDto> GetApplicationVersion()
         {
-            logger.LogInformation("Processing application version request.");
-            var applicationVersion = ApplicationVersion.Create();
-            return applicationVersion.Adapt<ApplicationVersionDto>(mapper.Config);
+            return mediatr.Send(new AppVersion.Query());
         }
 
         /// <summary>
         /// Requests the ping response from the Template domain service.
         /// </summary>
         [HttpGet("ping")]
-        public PongDto Ping()
+        public Task<PongDto> Ping()
         {
-            logger.LogInformation("Processing ping request.");
-            return new PongDto();
+            return mediatr.Send(new Ping.Query());
         }
     }
 }
