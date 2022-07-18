@@ -9,18 +9,24 @@
     <PackageReference Update="FluentValidation.DependencyInjectionExtensions" Version="11.1.0" />
     <PackageReference Update="MediatR" Version="9.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
-    <PackageReference Update="CSharpFunctionalExtensions" Version="2.30.0" />
+    <PackageReference Update="CSharpFunctionalExtensions" Version="2.31.0" />
+    <PackageReference Update="Refit.HttpClientFactory" Version="6.3.2" />
     <PackageReference Update="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
-    <PackageReference Update="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Update="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+    <PackageReference Update="Microsoft.Extensions.Configuration" Version="6.0.1" />
     <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Update="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Update="Microsoft.Extensions.Options" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup Label="Development and Testing Dependencies">
+    <PackageReference Update="Microsoft.AspNetCore.TestHost" Version="6.0.7" />
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.7" />
     <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition=" '$(GitRepoHost)' == 'GitHub' " />
     <PackageReference Update="Microsoft.SourceLink.Bitbucket.Git" Version="1.1.1" PrivateAssets="All" Condition=" '$(GitRepoHost)' == 'Bitbucket' " />
     <PackageReference Update="FluentAssertions" Version="6.7.0"/>
-    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.1.0"/>
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.2.0"/>
     <PackageReference Update="Moq" Version="4.16.1"/>
     <PackageReference Update="NUnit" Version="3.13.3"/>
     <PackageReference Update="NUnit3TestAdapter" Version="4.2.1"/>

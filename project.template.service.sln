@@ -46,6 +46,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Template.ServiceHos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Template.Services", "sources\main\Project.Template.Services\Project.Template.Services.csproj", "{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Template.ServiceClient.SystemTests", "sources\test\Project.Template.ServiceClient.SystemTests\Project.Template.ServiceClient.SystemTests.csproj", "{6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{4A6C2AEE-88EB-4FCB-B23E-7C8E0C5D0D3B} = {10C13CA1-DB6A-4562-B202-F3094862FDB5}
 		{3F93D7B5-91BB-4285-B46D-E7315C986B14} = {BB05FBDE-EEB6-43C9-9232-2C5B19E9F616}
 		{0ECD8280-BA56-4B40-8E53-0B10C9D16F3F} = {BB05FBDE-EEB6-43C9-9232-2C5B19E9F616}
+		{6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C} = {A29BF55F-1BB9-4CB2-9F93-72210934AEC0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52ED2678-ED41-4F75-BF07-2052B343F887}

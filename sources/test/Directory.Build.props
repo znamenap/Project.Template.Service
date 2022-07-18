@@ -2,7 +2,7 @@
   <Import Project="$(MSBuildThisFileDirectory)..\..\build\default.props"/>
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -24,7 +24,9 @@
     <SkipAutoProps>true</SkipAutoProps>
     <UseSourceLink>true</UseSourceLink>
     <DeterministicReport>true</DeterministicReport>
+    <DeterministicSourcePaths>true</DeterministicSourcePaths>
+    <Exclude>[*UnitTests*]*,[*SystemTests*]*</Exclude>
+    <IncludeTestAssembly>false</IncludeTestAssembly>
   </PropertyGroup>
-
 
 </Project>

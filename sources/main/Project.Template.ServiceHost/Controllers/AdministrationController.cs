@@ -2,6 +2,7 @@
 using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 
 using Project.Template.ServiceContracts;
 using Project.Template.ServiceContracts.Administration;
@@ -29,23 +30,32 @@ namespace Project.Template.ServiceHost.Controllers
             this.mediatr = mediatr ?? throw new ArgumentNullException(nameof(mediatr));
         }
 
-        /// <summary>
-        /// Gets the application version.
-        /// </summary>
-        /// <returns>An ApplicationVersionDto.</returns>
+        /// <inheritdoc />
         [HttpGet("version")]
-        public Task<ApplicationVersionDto> GetApplicationVersion()
+        public Task<ApplicationVersionDto> Version()
         {
             return mediatr.Send(new AppVersion.Query());
         }
 
-        /// <summary>
-        /// Requests the ping response from the Template domain service.
-        /// </summary>
+        /// <inheritdoc />
         [HttpGet("ping")]
         public Task<PongDto> Ping()
         {
             return mediatr.Send(new Ping.Query());
+        }
+
+        /// <inheritdoc />
+        [HttpGet("routes")]
+        public Task<RoutesDto> Routes()
+        {
+            return mediatr.Send(new Routes.Query());
+        }
+
+        /// <inheritdoc />
+        [HttpPost("reconfigure")]
+        public Task Reconfigure()
+        {
+            return mediatr.Send(new Reconfigure.Command());
         }
     }
 }

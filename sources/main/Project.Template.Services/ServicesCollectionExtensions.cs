@@ -14,7 +14,7 @@ namespace Project.Template.Services
         /// </summary>
         public static IServiceCollection AddTemplateServices(this IServiceCollection services)
         {
-            services.AddMediatR(typeof(ServicesCollectionExtensions));
+            services.AddMediatR(typeof(ServicesCollectionExtensions).Assembly);
 
             return services;
         }
