@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace Project.Template.ServiceClient.Gateways
 {
     /// <summary>
-    /// The abstract gateway base.
+    /// The abstract gateway client.
     /// </summary>
-    internal class AbstractGatewayBase
+    internal class AbstractClientGateway
     {
         /// <summary>
         /// Initiates the gateway call and processes the response. It checks the status code and throws 

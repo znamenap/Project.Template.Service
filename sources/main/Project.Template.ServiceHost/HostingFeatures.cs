@@ -84,12 +84,14 @@ namespace Project.Template.ServiceHost
             options.Filters.Add<FormatFilter>();
 
             // We want to preserve the SystemJsonOutputFormatter to take the default precedence over XML format.
+            // We remove the type so it gets appended and used as the last order so JSON takes precedence.
             options.OutputFormatters.RemoveType<XmlDataContractSerializerOutputFormatter>();
             options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
             options.OutputFormatters.RemoveType<XmlSerializerOutputFormatter>();
             options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
 
             // We want to support the input XML format also.
+            // We remove the type so it gets appended and used as the last order so JSON takes precedence.
             options.InputFormatters.RemoveType<XmlDataContractSerializerInputFormatter>();
             options.InputFormatters.Add(new XmlDataContractSerializerInputFormatter(options));
             options.InputFormatters.RemoveType<XmlSerializerInputFormatter>();
@@ -107,9 +109,6 @@ namespace Project.Template.ServiceHost
             // Add support for Data Contracts and Xml so the Accept-Content header can support it.
             builder.AddXmlSerializerFormatters();
             builder.AddXmlDataContractSerializerFormatters();
-
-            // PascalCase formatting
-            builder.AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
             return builder;
         }

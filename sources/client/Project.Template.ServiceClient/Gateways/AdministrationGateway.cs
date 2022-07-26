@@ -12,7 +12,7 @@ namespace Project.Template.ServiceClient.Gateways
     /// <summary>
     /// The gateway to administration contract at the remote service.
     /// </summary>
-    internal class AdministrationGateway : AbstractGatewayBase, IAdmininistrationContract, IDisposable
+    internal class AdministrationGateway : AbstractClientGateway, IAdmininistrationContract, IDisposable
     {
         private readonly IAdministrationContractDescriptor gateway;
         private readonly HttpClient client;
@@ -42,9 +42,9 @@ namespace Project.Template.ServiceClient.Gateways
         /// <summary>
         /// Initializes a new instance of the <see cref="AdministrationGateway"/> class.
         /// </summary>
-        public AdministrationGateway(IHttpClientFactory httpClientFactory)
+        public AdministrationGateway(IHttpClientFactory httpClientFactory, string httpClientName)
         {
-            client = httpClientFactory.CreateClient();
+            client = httpClientFactory.CreateClient(httpClientName);
             client.BaseAddress = new Uri(client.BaseAddress, "admin");
             gateway = RestService.For<IAdministrationContractDescriptor>(client);
         }

@@ -10,6 +10,7 @@
     <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\..\output\test\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
     <MSBuildProjectExtensionsPath>$(MSBuildThisFileDirectory)..\..\output\test\obj\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
     <IsPackable>false</IsPackable>
+    <PublicSign>true</PublicSign>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\TemplateKeyPair.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -18,14 +19,15 @@
   <PropertyGroup Label="Code Coverage Properties">
     <CollectCoverage>true</CollectCoverage>
     <CoverletOutputFormat>json,cobertura</CoverletOutputFormat>
-    <CoverletOutput>$(RootDir)\output\reports\coverage/</CoverletOutput>
-    <Threshold>69,50,69</Threshold>
-    <ThresholdType>line,branch,method</ThresholdType>
+    <CoverletOutput>$(RootDir)\output\reports\coverage\</CoverletOutput>
+    <MergeWith>$(CoverletOutput)coverage.json</MergeWith>
+    <!--<Threshold>69,69</Threshold>
+    <ThresholdType>line,method</ThresholdType>-->
     <SkipAutoProps>true</SkipAutoProps>
     <UseSourceLink>true</UseSourceLink>
     <DeterministicReport>true</DeterministicReport>
     <DeterministicSourcePaths>true</DeterministicSourcePaths>
-    <Exclude>[*UnitTests*]*,[*SystemTests*]*</Exclude>
+    <Exclude>[*ServiceContracts*]*,[*UnitTests*]*,[*SystemTests*]*</Exclude>
     <IncludeTestAssembly>false</IncludeTestAssembly>
   </PropertyGroup>
 

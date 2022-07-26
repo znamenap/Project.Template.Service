@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Project.Template.ServiceClient\Project.Template.ServiceClient.csproj" />
+    <ProjectReference Include="..\..\main\Project.Template.Domain\Project.Template.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

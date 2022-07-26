@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Project.Template.ServiceClient
 {
@@ -9,22 +8,27 @@ namespace Project.Template.ServiceClient
     public class TemplateServiceClientOptions
     {
         /// <summary>
+        /// The name of the options section for these options.
+        /// </summary>
+        public readonly static string Name = "TemplateServiceClient";
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="TemplateServiceClientOptions"/> class.
         /// </summary>
         public TemplateServiceClientOptions()
         {
-            Timeout = TimeSpan.FromSeconds(140);
+            TimeoutSeconds = 140;
         }
 
         /// <summary>
         /// Gets or sets the service URI.
         /// </summary>
-        [Required]
-        public Uri ServiceUri { get; set; }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "requires not null and valid URI string value")]
+        public string ServiceUri { get; set; }
 
         /// <summary>
         /// Gets or sets the timeout.
         /// </summary>
-        public TimeSpan Timeout { get; set; }
+        public uint TimeoutSeconds { get; set; }
     }
 }

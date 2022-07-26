@@ -42,7 +42,7 @@ namespace Project.Template.Services.Administration
             }
 
             /// <summary>
-            /// Performs the reload operation ono top of the provided instance of IConfigurationRoot.
+            /// Performs the reload operation on top of the provided instance of IConfigurationRoot.
             /// </summary>
             /// <param name="command">The request to handle.</param>
             /// <param name="cancellationToken">The cancellation token.</param>

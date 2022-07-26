@@ -19,6 +19,7 @@ namespace Project.Template.ServiceClient.SystemTests
         [OneTimeSetUp]
         public void Setup()
         {
+            // TODO: Consider inspiration from https://github.com/martincostello/dotnet-minimal-api-integration-testing/tree/main/tests/TodoApp.Tests
             app = new WebApplicationFactory<Program>();
             sut = new TemplateServiceClient(app.Server.CreateHttpClientFactory());
         }
@@ -26,6 +27,7 @@ namespace Project.Template.ServiceClient.SystemTests
         [OneTimeTearDown]
         public async Task TearDown()
         {
+            sut.Dispose();
             if (app != null)
             {
                 await app.DisposeAsync();

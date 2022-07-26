@@ -22,7 +22,7 @@ namespace Project.Template.ServiceClient
         /// <param name="httpClientFactory">The HttpClientFactory implementation to use</param>
         public TemplateServiceClient(IHttpClientFactory httpClientFactory)
         {
-            Administration = new AdministrationGateway(httpClientFactory);
+            Administration = new AdministrationGateway(httpClientFactory, nameof(TemplateServiceClient));
         }
 
         /// <inheritdoc />
