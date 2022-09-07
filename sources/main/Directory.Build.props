@@ -8,7 +8,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PublicSign>true</PublicSign>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\TemplateKeyPair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\DomainNameKeyPair.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
 </Project>

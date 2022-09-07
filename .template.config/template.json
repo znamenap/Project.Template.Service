@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json.schemastore.org/template.json",
+  "author": "znamenap",
+  "classifications": [ "Service", "Library" ],
+  "identity": "Project.Template.Service.Template",
+  "name": "Project.Template.Service.Template",
+  "description": "An opinionated RESt Web Service API producing service client library also.",
+  "shortName": "pts",
+  
+  "defaultName": "{project-lowercase}.{domain-lowercase}.Service",
+  "groupIdentity": "znamenap",
+  "tags": {
+    "type": "solution",
+    "language": "C#"
+  },
+  "preferNameDirectory": false,
+  "rename": {
+    "gitignore.txt": ".gitignore",
+    "editorconfig.txt": ".editorconfig"
+  },
+  "guids": [
+    "2628EDF0-32D3-4B7D-B1B3-59948E350B31",
+    "BB05FBDE-EEB6-43C9-9232-2C5B19E9F616",
+    "A29BF55F-1BB9-4CB2-9F93-72210934AEC0",
+    "15E870CE-E98D-4044-BF47-7ABA26D66C87",
+    "10C13CA1-DB6A-4562-B202-F3094862FDB5",
+    "29D5FEFE-0141-46C5-9186-C5AB3212C8CA",
+    "C4C9301B-1E11-4FCF-8CF7-D5FC08A17D04",
+    "1872F2D9-EEB7-40CC-A560-60AF0DDCE0FF",
+    "41DEB4C4-1E04-49E2-BCBA-CE8960E95D3C",
+    "31112353-51E5-4524-B3A6-B0B025E35B27",
+    "4A6C2AEE-88EB-4FCB-B23E-7C8E0C5D0D3B",
+    "3F93D7B5-91BB-4285-B46D-E7315C986B14",
+    "0ECD8280-BA56-4B40-8E53-0B10C9D16F3F",
+    "6FEAF373-AF6E-4C72-9E93-6CDC14F9D16C",
+    "07B7ACC1-F5AB-4568-A5DE-7EB66E979089"
+  ],
+  "symbols": {
+    "project": {
+      "type": "parameter",
+      "description": "Replacement for 'Project' in the Project.Template.Service compound naming.",
+      "datatype": "text",
+      "isRequired": true,
+      "displayName": "The Project Name"
+    },
+    "project-replacement-filename": {
+      "type": "derived",
+      "valueSource": "project",
+      "valueTransform": "project-rename",
+      "fileRename": "ProjectAcronym",
+      "replaces": "ProjectAcronym"
+    },
+    "domain": {
+      "type": "parameter",
+      "description": "Replacement for 'Template' in the Project.Template.Service compound naming.",
+      "datatype": "text",
+      "isRequired": true,
+      "displayName": "The Domain Name"
+    },
+    "domain-replacement-filename": {
+      "type": "derived",
+      "valueSource": "domain",
+      "valueTransform": "domain-rename",
+      "fileRename": "DomainName",
+      "replaces": "DomainName"
+    },
+    "company": {
+      "type": "parameter",
+      "description": "Replacement for 'Company' in the project files.",
+      "datatype": "text",
+      "isRequired": true,
+      "displayName": "The Company Name"
+    },
+    "company-replacement-filename": {
+      "type": "derived",
+      "valueSource": "company",
+      "valueTransform": "company-rename",
+      "fileRename": "CompanyName",
+      "replaces": "CompanyName"
+    }
+  },
+  "forms": {
+    "project-rename": {
+      "identifier": "replace",
+      "pattern": "^(?!<)ProjectAcronym(?!\\s*(>|/>|\\)))",
+      "replacement": ""
+    },
+    "domain-rename": {
+      "identifier": "replace",
+      "pattern": "(?!<)DomainName(?!\\s*(>|/>|\\)))",
+      "replacement": ""
+    },
+    "company-rename": {
+      "identifier": "replace",
+      "pattern": "(?!<)CompanyName(?!\\s*(>|/>|\\)))",
+      "replacement": ""
+    }
+  }
+}

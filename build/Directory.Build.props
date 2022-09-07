@@ -3,8 +3,8 @@
 
   <PropertyGroup>
     <BaseOutputPath>$(MSBuildThisFileDirectory)..\output\build\bin\</BaseOutputPath>
-    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\output\build\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <MSBuildProjectExtensionsPath>$(MSBuildThisFileDirectory)..\output\build\obj\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\output\build\obj\$(MSBuildProjectAcronym)\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(MSBuildThisFileDirectory)..\output\build\obj\$(MSBuildProjectAcronym)\</MSBuildProjectExtensionsPath>
   </PropertyGroup>
 
 </Project>

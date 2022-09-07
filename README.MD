@@ -1,7 +1,7 @@
 
-# Project Domain Template Service
+# ProjectAcronym Domain DomainName Service
 
-## Project TODOs
+## ProjectAcronym TODOs
 
 - [Series: Exploring .NET 6](https://andrewlock.net/series/exploring-dotnet-6/)
 - [xplat Integrated Windows Authentication (ntlm/Kerberos) #4662](https://github.com/dotnet/aspnetcore/issues/4662)

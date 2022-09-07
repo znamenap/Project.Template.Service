@@ -3,7 +3,7 @@
   <Sdk Name="Microsoft.Build.CentralPackageVersions" />
 
   <PropertyGroup>
-    <DocumentationFile>$(OutputPath)\$(MSBuildProjectName).xml</DocumentationFile>
+    <DocumentationFile>$(OutputPath)\$(MSBuildProjectAcronym).xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

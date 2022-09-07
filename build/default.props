@@ -11,13 +11,13 @@
     <Platform Condition="'$(Platform)' == ''">Any CPU</Platform>
 
     <!-- Identification -->
-    <Company>Template Company</Company>
-    <Copyright>Template Company ©️</Copyright>
-    <Authors>Template Development Team</Authors>
-    <Description>Template Domain Solution</Description>
-    <PackageProjectUrl>https://www.template.net/product/</PackageProjectUrl>
-    <Product>Template Product ®️</Product>
-    <Trademark>Template Company ™️</Trademark>
+    <Company>CompanyName</Company>
+    <Copyright>CompanyName ©️</Copyright>
+    <Authors>ProjectAcronym Development Team</Authors>
+    <Description>DomainName Domain Solution</Description>
+    <PackageProjectUrl>https://www.CompanyName.com/ProjectAcronym/DomainName/</PackageProjectUrl>
+    <Product>ProjectAcronym DomainName Product ®️</Product>
+    <Trademark>ProjectAcronym DomainName - CompanyName ™️</Trademark>
     <ProductFileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</ProductFileVersion>
     <InformationalVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(GitCommit)@$(GitBranch)</InformationalVersion>
     <FileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</FileVersion>
