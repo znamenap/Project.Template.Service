@@ -41,8 +41,8 @@ namespace ProjectAcronym.DomainName.ServiceHost
             // Add services to the container.
             builder.Services.AddSingleton(typeConfig);
             builder.Services.AddScoped<IMapper, Mapper>();
-            builder.Services.AddControllers(o => SetTemplateMvcOptions(o)).AddTemplateControllers();
-            builder.Services.AddTemplateServices();
+            builder.Services.AddControllers(o => SetMvcOptions(o)).AddControllers();
+            builder.Services.AddServices();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
@@ -75,7 +75,7 @@ namespace ProjectAcronym.DomainName.ServiceHost
         /// <summary>
         /// Sets the controller's MVC options.
         /// </summary>
-        public static void SetTemplateMvcOptions(MvcOptions options)
+        public static void SetMvcOptions(MvcOptions options)
         {
             // respect the browsers/clients Accept-Content request header
             options.RespectBrowserAcceptHeader = true;
@@ -101,12 +101,12 @@ namespace ProjectAcronym.DomainName.ServiceHost
         /// <summary>
         /// Adds the template controllers.
         /// </summary>
-        public static IMvcBuilder AddTemplateControllers(this IMvcBuilder builder)
+        public static IMvcBuilder AddControllers(this IMvcBuilder builder)
         {
             // Register all controllers of this assembly.
             builder.AddApplicationPart(typeof(ServicesCollectionExtensions).Assembly);
 
-            // Add support for Data Contracts and Xml so the Accept-Content header can support it.
+            // Add support for Data Contracts and XML so the Accept-Content header can support it.
             builder.AddXmlSerializerFormatters();
             builder.AddXmlDataContractSerializerFormatters();
 

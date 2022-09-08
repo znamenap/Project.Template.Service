@@ -56,9 +56,9 @@ namespace ProjectAcronym.DomainName.ServiceClient.SystemTests
         }
 
         [Test]
-        public async Task GivenSupportsAdministration_WhenReconfigure_ThenValidResponse()
+        public Task GivenSupportsAdministration_WhenReconfigure_ThenValidResponse()
         {
-            await sut.Administration.Reconfigure();
+            return sut.Administration.Reconfigure();
         }
     }
 }

@@ -3,8 +3,7 @@ using Microsoft.AspNetCore.Builder;
 
 namespace ProjectAcronym.DomainName.ServiceHost
 {
-    // This is partial on purpose due to integration testing.
-    public partial class Program
+    public static class Program
     {
         private const ushort httpPortNumber = 40080;
         private const ushort httpsPortNumber = 40443;
