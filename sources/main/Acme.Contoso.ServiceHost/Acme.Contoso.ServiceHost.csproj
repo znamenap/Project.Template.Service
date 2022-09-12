@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Mapster" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Acme.Contoso.ServiceContracts\Acme.Contoso.ServiceContracts.csproj" />
+    <ProjectReference Include="..\Acme.Contoso.Domain\Acme.Contoso.Domain.csproj" />
+    <ProjectReference Include="..\Acme.Contoso.Services\Acme.Contoso.Services.csproj" />
+  </ItemGroup>
+
+</Project>

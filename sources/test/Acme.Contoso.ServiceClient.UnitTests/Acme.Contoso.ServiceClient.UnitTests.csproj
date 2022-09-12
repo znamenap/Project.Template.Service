@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Acme.Contoso.ServiceClient\Acme.Contoso.ServiceClient.csproj" />
+    <ProjectReference Include="..\..\main\Acme.Contoso.Domain\Acme.Contoso.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

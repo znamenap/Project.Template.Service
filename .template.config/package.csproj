@@ -21,7 +21,7 @@
 
   <PropertyGroup>
     <OutputPath>$(MSBuildThisFileDirectory)..\output\template\bin\</OutputPath>
-    <IntermediateOutputPath>$(MSBuildThisFileDirectory)..\output\template\obj\$(MSBuildProjectAcronym)\</IntermediateOutputPath>
+    <IntermediateOutputPath>$(MSBuildThisFileDirectory)..\output\template\obj\$(MSBuildAcme)\</IntermediateOutputPath>
   </PropertyGroup>
 
 

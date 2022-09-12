@@ -13,11 +13,11 @@
     <!-- Identification -->
     <Company>CompanyName</Company>
     <Copyright>CompanyName ©️</Copyright>
-    <Authors>ProjectAcronym Development Team</Authors>
-    <Description>DomainName Domain Solution</Description>
-    <PackageProjectUrl>https://www.CompanyName.com/ProjectAcronym/DomainName/</PackageProjectUrl>
-    <Product>ProjectAcronym DomainName Product ®️</Product>
-    <Trademark>ProjectAcronym DomainName - CompanyName ™️</Trademark>
+    <Authors>Acme Development Team</Authors>
+    <Description>Contoso Domain Solution</Description>
+    <PackageProjectUrl>https://www.CompanyName.com/Acme/Contoso/</PackageProjectUrl>
+    <Product>Acme Contoso Product ®️</Product>
+    <Trademark>Acme Contoso - CompanyName ™️</Trademark>
     <ProductFileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</ProductFileVersion>
     <InformationalVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(GitCommit)@$(GitBranch)</InformationalVersion>
     <FileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)</FileVersion>

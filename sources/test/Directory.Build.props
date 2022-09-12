@@ -12,7 +12,7 @@
     <IsPackable>false</IsPackable>
     <PublicSign>true</PublicSign>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\DomainNameKeyPair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\ContosoKeyPair.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <!-- https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md -->

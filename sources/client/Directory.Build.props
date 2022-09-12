@@ -12,7 +12,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PublicSign>true</PublicSign>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\DomainNameKeyPair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$(RootDir)\build\certs\ContosoKeyPair.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
 </Project>

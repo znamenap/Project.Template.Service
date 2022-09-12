@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Acme.Contoso.ServiceClient\Acme.Contoso.ServiceClient.csproj" />
+    <ProjectReference Include="..\..\client\Acme.Contoso.ServiceContracts\Acme.Contoso.ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\main\Acme.Contoso.ServiceHost\Acme.Contoso.ServiceHost.csproj" />
+  </ItemGroup>
+
+</Project>

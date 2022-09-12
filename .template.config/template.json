@@ -2,13 +2,11 @@
   "$schema": "https://json.schemastore.org/template.json",
   "author": "znamenap",
   "classifications": [ "Service", "Library" ],
+  "groupIdentity": "Project.Template",
   "identity": "Project.Template.Service.Template",
   "name": "Project.Template.Service.Template",
   "description": "An opinionated RESt Web Service API producing service client library also.",
   "shortName": "pts",
-  
-  "defaultName": "{project-lowercase}.{domain-lowercase}.Service",
-  "groupIdentity": "znamenap",
   "tags": {
     "type": "solution",
     "language": "C#"
@@ -47,8 +45,8 @@
       "type": "derived",
       "valueSource": "project",
       "valueTransform": "project-rename",
-      "fileRename": "ProjectAcronym",
-      "replaces": "ProjectAcronym"
+      "fileRename": "Acme",
+      "replaces": "Acme"
     },
     "domain": {
       "type": "parameter",
@@ -61,8 +59,8 @@
       "type": "derived",
       "valueSource": "domain",
       "valueTransform": "domain-rename",
-      "fileRename": "DomainName",
-      "replaces": "DomainName"
+      "fileRename": "Contoso",
+      "replaces": "Contoso"
     },
     "company": {
       "type": "parameter",
@@ -82,12 +80,12 @@
   "forms": {
     "project-rename": {
       "identifier": "replace",
-      "pattern": "^(?!<)ProjectAcronym(?!\\s*(>|/>|\\)))",
+      "pattern": "^(?!<)Acme(?!\\s*(>|/>|\\)))",
       "replacement": ""
     },
     "domain-rename": {
       "identifier": "replace",
-      "pattern": "(?!<)DomainName(?!\\s*(>|/>|\\)))",
+      "pattern": "(?!<)Contoso(?!\\s*(>|/>|\\)))",
       "replacement": ""
     },
     "company-rename": {

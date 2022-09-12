@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\client\ProjectAcronym.DomainName.ServiceClient\ProjectAcronym.DomainName.ServiceClient.csproj" />
-    <ProjectReference Include="..\..\main\ProjectAcronym.DomainName.Domain\ProjectAcronym.DomainName.Domain.csproj" />
-  </ItemGroup>
-
-</Project>

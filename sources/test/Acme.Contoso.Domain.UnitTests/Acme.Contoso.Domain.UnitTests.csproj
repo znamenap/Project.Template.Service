@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\main\Acme.Contoso.Domain\Acme.Contoso.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
